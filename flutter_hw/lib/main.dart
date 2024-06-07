@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      title: 'Flutter Demo',
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: TextfieldValidation(),

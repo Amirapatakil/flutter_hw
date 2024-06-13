@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/practice_07_june.dart/screens/first_screen.dart';
+import 'package:flutter_hw/verstka/screens/first_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstScreens(),
+      home: FirstPage(),
     );
   }
 }

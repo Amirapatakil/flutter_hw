@@ -28,7 +28,7 @@ class AppButton extends StatelessWidget {
         child: Text(
           text,
           style: AppTextStyles.s24w800.copyWith(
-            color: AppColors.homescreenButtonText,
+            color: AppColors.ButtonText,
           ),
         ),
       ),

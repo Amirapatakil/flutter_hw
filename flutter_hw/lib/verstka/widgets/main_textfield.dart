@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/app_dimens.dart';
+import 'package:flutter_hw/verstka/widgets/app_dimens.dart';
 
-class SecondPageTextField extends StatefulWidget {
-  const SecondPageTextField({
+class MainTextField extends StatefulWidget {
+  const MainTextField({
     required this.controller,
     this.validator,
     required this.labelText,
@@ -17,10 +17,10 @@ class SecondPageTextField extends StatefulWidget {
   final TextStyle style;
 
   @override
-  State<SecondPageTextField> createState() => _SecondPageTextFieldState();
+  State<MainTextField> createState() => _MainTextFieldState();
 }
 
-class _SecondPageTextFieldState extends State<SecondPageTextField> {
+class _MainTextFieldState extends State<MainTextField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,7 +30,6 @@ class _SecondPageTextFieldState extends State<SecondPageTextField> {
       child: TextFormField(
         style: widget.style,
         controller: widget.controller,
-        validator: widget.validator,
         keyboardType: widget.keyboardType,
         decoration: InputDecoration(
           labelText: widget.labelText,
@@ -49,6 +48,7 @@ class _SecondPageTextFieldState extends State<SecondPageTextField> {
             borderSide: const BorderSide(color: Colors.red),
           ),
         ),
+        validator: widget.validator,
       ),
     );
   }

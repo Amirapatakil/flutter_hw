@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/app_dimens.dart';
+import 'package:flutter_hw/verstka/widgets/app_dimens.dart';
 import 'package:flutter_hw/verstka/app_theme/app_colors.dart';
-import 'package:flutter_hw/verstka/screens/first_page.dart';
 
 class AppScaffold extends StatelessWidget {
   const AppScaffold({
     super.key,
     required this.child,
     this.isBackButtonVisible = false,
+    required this.onTap,
   });
   final Widget child;
   final bool isBackButtonVisible;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,12 +39,7 @@ class AppScaffold extends StatelessWidget {
                   width: AppDimens.homeScreenCircleRadius,
                   height: AppDimens.homeScreenCircleRadius,
                   child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const FirstPage()));
-                    },
+                    onTap: onTap,
                     child: const Icon(
                       Icons.arrow_back_ios,
                       size: 35,

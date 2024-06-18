@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/app_dimens.dart';
+import 'package:flutter_hw/verstka/widgets/app_dimens.dart';
 import 'package:flutter_hw/verstka/app_theme/app_text_styles.dart';
 import 'package:flutter_hw/verstka/screens/third_page.dart';
 
@@ -39,7 +39,7 @@ class SecondPageText extends StatelessWidget {
               style: AppTextStyles.s18w500,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
         ],

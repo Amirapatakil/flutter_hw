@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hw/app_assets.dart';
-import 'package:flutter_hw/app_dimens.dart';
+import 'package:flutter_hw/verstka/widgets/app_assets.dart';
+import 'package:flutter_hw/verstka/widgets/app_dimens.dart';
 import 'package:flutter_hw/verstka/app_theme/app_colors.dart';
 import 'package:flutter_hw/verstka/app_theme/app_text_styles.dart';
+import 'package:flutter_hw/verstka/screens/second_page.dart';
 import 'package:flutter_hw/verstka/widgets/app_buttons.dart';
 
 class FirstPage extends StatefulWidget {
@@ -59,7 +60,12 @@ class _FirstPageState extends State<FirstPage> {
                       height: 10,
                     ),
                     AppButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SecondPage()));
+                      },
                       text: 'Tenant',
                     ),
                     const SizedBox(
@@ -73,7 +79,12 @@ class _FirstPageState extends State<FirstPage> {
                       height: 11,
                     ),
                     AppButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SecondPage()));
+                      },
                       text: 'Landlord',
                     )
                   ],
